@@ -1,16 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'devicon/devicon.min.css';
+
+/* src/index.css */
+.devicon {
+  color: inherit !important;  /* Allow Devicon to inherit original color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.devicon-html5-plain {
+  color: #e44d26 !important;  /* HTML5 color */
+}
+
+.devicon-css3-plain {
+  color: #1572b6 !important;  /* CSS3 color */
+}
+
+.devicon-tailwindcss-plain {
+  color: #38bdf8 !important;  /* Tailwind color */
+}
+
+.devicon-javascript-plain {
+  color: #f7df1e !important;  /* JavaScript color */
+}
+
+.devicon-react-plain {
+  color: #61dafb !important;  /* React color */
+}
+
+.devicon-webpack-plain {
+  color: #8dd6f0 !important;  /* Webpack color */
+}
+
+.devicon-git-plain {
+  color: #f1502f !important;  /* Git color */
+}
+.devicon-linkedin-plain{
+  color: #f1502f !important;  /* CSS3 color */
+  
+}
+.devicon-github-original{
+  color: #f1502f !important;  /* CSS3 color */
 }
