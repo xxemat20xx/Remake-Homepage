@@ -15,45 +15,31 @@ export default function Main() {
     { class: 'devicon-github-original', alt: 'GitHub' },  // GitHub icon
   ]
   return (
-    <section className="hero bg-gray-900 font-montserrat p-4 sm:p-6 md:p-10 lg:p-16 xl:p-20 2xl:p-64 flex flex-wrap w-full">
-              <div className="profile-image-container w-full md:w-1/2 order-1 md:order-2 flex justify-center">
-                        <img src={profileImg} alt="profileImg" className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 xl:w-72 xl:h-72 mb-5 object-cover max-w-full max-h-full"/>
-
-                      <div className="quicklink-socmed-container flex flex-col justify-center items-center">
-                          <div className="line h-32 w-1 bg-orange-500"></div>
-                          <div className="quicklink flex flex-col mt-5">
-                          {quickLink.map((icon, index) => (
-                            <a href="#" className="cursor-pointer" key={index}>
+    <section className="hero-section bg-gray-500">
+            <div className="profile-details">
+                <h1 className="text-6xl text-orange-500 font-extrabold mb-4">Raymart S.</h1>
+                <p>I'm a self-taught web developer passionate about creating interactive and user-friendly web applications. I enjoy tackling challenges, learning new technologies, and continuously improving my skills in front-end development. Soon, I’ll be diving into back-end development as well.</p>
+                <button>More about me</button>
+                <h2 className="text-3xl font-bold mt-4 mb-4">Skills:</h2>
+                <div className="icon-container flex gap-2">
+                      {techIcons.map((icon, index) => (
+                        <i key={index} className={`devicon ${icon.class} text-3xl`} aria-label={icon.alt}/>
+                          ))}
+                </div>
+            </div>
+            <div className="profile-image-container flex">
+                  <img src={profileImg} alt="ProfileImage" />
+                  <div className="socmed-quicklink flex flex-col gap-3 justify-center items-center">
+                  <div className="h-32 w-1 bg-orange-500"></div>
+                  {quickLink.map((icon, index) => (
                                 <i
-                         
-                                    className={`devicon ${icon.class} text-3xl mb-3 `}  // Use w-10 for better icon size, avoid text-* classes
+                                    key={index}
+                                    className={`devicon ${icon.class} text-3xl mb-3`} 
                                     aria-label={icon.alt}
                                   />
-                            </a>
-                          
                           ))}
-                        </div>
-                      </div>
                   </div>
-            <div className="hero-content block text-left w-full md:w-1/2 order-2 md:order-1">
-                    <h1 className="text-orange-500 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-5 sm:mb-6 md:mb-8 lg:mb-10">
-          Raymart S.
-        </h1>
-
-              <p className="text-white text-sm">I'm a self-taught web developer passionate about creating interactive and user-friendly web applications. I enjoy tackling challenges, learning new technologies, and continuously improving my skills in front-end development. Soon, I’ll be diving into back-end development as well.</p>
-              <button className="rounded-full bg-orange-500 inline p-2 mt-5 text-white hover:bg-orange-800 transition delay-90 duration-300 ease-in-out">More about me →</button>
-              <div className="tech-icons-content flex  mt-5">
-              {techIcons.map((icon, index) => (
-                <i
-                  key={index}
-                  className={`devicon ${icon.class} text-3xl mr-3`}  // Use w-10 for better icon size, avoid text-* classes
-                  aria-label={icon.alt}
-                />
-              ))}
             </div>
-            </div>
-        
-           
       </section>
   );
 }
